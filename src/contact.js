@@ -2,17 +2,7 @@ export default async (req, res) => {
   require('dotenv').config();
 
   let nodemailer = require('nodemailer');
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.hostinger.com',
-    port: 465,
-
-    auth: {
-      user: 'info@immense.agency',
-      pass: 'Fico_1994',
-    },
-
-    secure: true,
-  });
+  const transporter = nodemailer.createTransport({});
   await new Promise((resolve, reject) => {
     // verify connection configuration
     transporter.verify(function (error, success) {
